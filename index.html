@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Hover Burger — Sabor sem rodeios</title>
+<meta name="description" content="Hover Burger — smash burgers de verdade em Pompeia, São Paulo. Pão brioche macio, smash de 90g na chapa e gorgonzola feito na casa. Peça pelo iFood, Keeta ou 99 Food.">
+<meta name="theme-color" content="#070605">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Hover Burger — Sabor sem rodeios">
+<meta property="og:description" content="Smash burgers de verdade em Pompeia, São Paulo. Gorgonzola feito na casa, carne na chapa, sem frescura.">
+<meta property="og:image" content="assets/hero-poster.jpg">
+
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= PRELOADER ================= -->
+<div id="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <img class="preloader__logo" src="assets/logo.png" alt="">
+    <div class="preloader__bar"><span id="preloaderFill"></span></div>
+    <div class="preloader__count" id="preloaderCount">0%</div>
+  </div>
+</div>
+
+<!-- ================= GRAIN / NOISE OVERLAY ================= -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ================= SCROLL PROGRESS ================= -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ================= CUSTOM CURSOR ================= -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="nav" id="siteNav">
+  <div class="nav__inner container">
+    <a href="#topo" class="nav__logo" aria-label="Hover Burger — início">
+      <img src="assets/logo.png" alt="Hover Burger">
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#sobre" data-nav-link>A Casa</a>
+      <a href="#cardapio" data-nav-link>Cardápio</a>
+      <a href="#horarios" data-nav-link>Horários</a>
+      <a href="#localizacao" data-nav-link>Localização</a>
+      <a class="nav__cta" href="https://wa.me/5511989306729?text=Oi%2C%20Hover%20Burger!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener" data-nav-link>Peça Agora</a>
+    </nav>
+
+    <button class="nav__burger" id="navBurger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="topo">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero">
+    <div class="hero__media">
+      <video
+        class="hero__video"
+        src="assets/hero-video.mp4"
+        poster="assets/hero-poster.jpg"
+        autoplay muted loop playsinline
+        preload="auto"></video>
+      <div class="hero__overlay"></div>
+      <div class="hero__vignette"></div>
+    </div>
+
+    <div class="hero__content container">
+      <p class="hero__eyebrow reveal" data-reveal>@hoverburger_ · Pompeia, São Paulo</p>
+
+      <h1 class="hero__title" aria-label="Hover Burger">
+        <span class="hero__title-line">
+          <span class="word">HOVER</span>
+        </span>
+        <span class="hero__title-line hero__title-line--accent">
+          <span class="word">BURGER</span>
+        </span>
+      </h1>
+
+      <p class="hero__tagline reveal" data-reveal>Seu smash burger favorito <span class="hero__smile">:)</span></p>
+      <p class="hero__sub reveal" data-reveal>Sabor sem rodeios. Pão brioche macio, smash de 90g na chapa e gorgonzola feito na casa.</p>
+
+      <div class="hero__actions reveal" data-reveal>
+        <a href="#cardapio" class="btn btn--primary" data-magnetic>
+          <span>Ver Cardápio</span>
+        </a>
+        <a href="https://wa.me/5511989306729?text=Oi%2C%20Hover%20Burger!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener" class="btn btn--ghost" data-magnetic>
+          <span>Pedir no WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-mouse"><span></span></span>
+      <span class="hero__scroll-label">role para baixo</span>
+    </div>
+  </section>
+
+  <!-- ================= MARQUEE ================= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>SMASH DE 90G&nbsp;</span><span class="marquee__dot">★</span>
+      <span>&nbsp;GORGONZOLA FEITO NA CASA&nbsp;</span><span class="marquee__dot">★</span>
+      <span>&nbsp;CHAPA QUENTE&nbsp;</span><span class="marquee__dot">★</span>
+      <span>&nbsp;PÃO BRIOCHE MACIO&nbsp;</span><span class="marquee__dot">★</span>
+      <span>&nbsp;DELIVERY RÁPIDO&nbsp;</span><span class="marquee__dot">★</span>
+      <span>SMASH DE 90G&nbsp;</span><span class="marquee__dot">★</span>
+      <span>&nbsp;GORGONZOLA FEITO NA CASA&nbsp;</span><span class="marquee__dot">★</span>
+      <span>&nbsp;CHAPA QUENTE&nbsp;</span><span class="marquee__dot">★</span>
+      <span>&nbsp;PÃO BRIOCHE MACIO&nbsp;</span><span class="marquee__dot">★</span>
+      <span>&nbsp;DELIVERY RÁPIDO&nbsp;</span><span class="marquee__dot">★</span>
+    </div>
+  </div>
+
+  <!-- ================= SOBRE / A CASA ================= -->
+  <section class="sobre" id="sobre">
+    <div class="sobre__bg-word" aria-hidden="true">HOVER</div>
+    <div class="container sobre__grid">
+      <div class="sobre__text">
+        <p class="eyebrow reveal" data-reveal>A Casa</p>
+        <h2 class="section-title reveal" data-reveal>Sem frescura.<br>Só <span class="text-accent">sabor</span>.</h2>
+        <p class="sobre__p reveal" data-reveal>
+          A Hover Burger nasceu com uma missão simples: fazer o smash burger perfeito e não sair da chapa até
+          conseguir. Carne na chapa, casquinha tostada, queijo derretendo na borda — foco total no produto,
+          sem enrolação e sem frescura.
+        </p>
+        <p class="sobre__p reveal" data-reveal>
+          O destaque absoluto vai para o <strong>gorgonzola feito na casa</strong>: cremoso, encorpado e
+          feito pra ser devorado num pão brioche macio de verdade. Urbana, paulistana e direta ao ponto —
+          essa é a vibe da nossa cozinha.
+        </p>
+
+        <div class="sobre__stats">
+          <div class="stat reveal" data-reveal>
+            <span class="stat__num" data-counter data-target="90">0</span><span class="stat__suffix">g</span>
+            <span class="stat__label">de smash na chapa</span>
+          </div>
+          <div class="stat reveal" data-reveal>
+            <span class="stat__num" data-counter data-target="100">0</span><span class="stat__suffix">%</span>
+            <span class="stat__label">gorgonzola feito na casa</span>
+          </div>
+          <div class="stat reveal" data-reveal>
+            <span class="stat__num" data-counter data-target="3">0</span><span class="stat__suffix">×</span>
+            <span class="stat__label">apps de delivery</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sobre__mark reveal" data-reveal>
+        <div class="sobre__mark-glow"></div>
+        <img src="assets/logo.png" alt="Hover Burger" class="sobre__mark-logo">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DESTAQUE / SIGNATURE ================= -->
+  <section class="destaque">
+    <div class="destaque__glow" aria-hidden="true"></div>
+    <div class="container destaque__inner">
+      <span class="badge badge--pulse reveal" data-reveal>Mais Pedido</span>
+      <h2 class="destaque__title reveal" data-reveal>GORGOZIN</h2>
+      <p class="destaque__desc reveal" data-reveal>
+        Smash de 90g + queijo <strong>gorgonzola feito na casa</strong>, no pão brioche macio.
+        O queridinho de quem já provou.
+      </p>
+      <div class="destaque__price reveal" data-reveal>
+        <span class="destaque__price-from">a partir de</span>
+        <span class="destaque__price-value">R$ 27</span>
+        <span class="destaque__price-cents">,00</span>
+      </div>
+      <a href="#cardapio" class="btn btn--primary reveal" data-reveal data-magnetic><span>Quero o meu</span></a>
+    </div>
+  </section>
+
+  <!-- ================= CARDÁPIO ================= -->
+  <section class="cardapio" id="cardapio">
+    <div class="container">
+      <p class="eyebrow reveal center" data-reveal>Cardápio</p>
+      <h2 class="section-title center reveal" data-reveal>Peça o seu <span class="text-accent">smash</span></h2>
+
+      <div class="tabs reveal" data-reveal role="tablist" aria-label="Categorias do cardápio">
+        <button class="tab is-active" data-tab="smash" role="tab" aria-selected="true">Smash Burgers</button>
+        <button class="tab" data-tab="vege" role="tab" aria-selected="false">Vegetarianos</button>
+        <button class="tab" data-tab="acompanhamentos" role="tab" aria-selected="false">Acompanhamentos</button>
+        <button class="tab" data-tab="molhos" role="tab" aria-selected="false">Molhos</button>
+        <button class="tab" data-tab="bebidas" role="tab" aria-selected="false">Bebidas</button>
+      </div>
+
+      <!-- SMASH BURGERS -->
+      <div class="menu-panel is-active" data-panel="smash">
+        <div class="menu-grid">
+
+          <article class="menu-card reveal" data-reveal data-simple="27,00" data-double="37,00"
+                    data-desc-simple="Smash de 90g, queijo americano e molho à sua escolha."
+                    data-desc-double="Duplo smash de 90g, com o dobro do queijo americano.">
+            <div class="menu-card__top">
+              <h3>Hoverzin</h3>
+              <div class="size-toggle" data-size-toggle>
+                <button type="button" class="size-toggle__opt is-active" data-size="simple">Simples</button>
+                <button type="button" class="size-toggle__opt" data-size="double">Duplo</button>
+              </div>
+            </div>
+            <p class="menu-card__desc" data-desc>Smash de 90g, queijo americano e molho à sua escolha.</p>
+            <div class="menu-card__price"><span>R$</span><strong data-price>27,00</strong></div>
+          </article>
+
+          <article class="menu-card menu-card--hot reveal" data-reveal data-simple="27,00" data-double="36,00"
+                    data-desc-simple="Smash de 90g, queijo gorgonzola feito na casa."
+                    data-desc-double="Duplo smash de 90g, com o dobro de queijo gorgonzola feito na casa.">
+            <span class="badge">Mais Pedido</span>
+            <div class="menu-card__top">
+              <h3>Gorgozin</h3>
+              <div class="size-toggle" data-size-toggle>
+                <button type="button" class="size-toggle__opt is-active" data-size="simple">Simples</button>
+                <button type="button" class="size-toggle__opt" data-size="double">Duplo</button>
+              </div>
+            </div>
+            <p class="menu-card__desc" data-desc>Smash de 90g, queijo gorgonzola feito na casa.</p>
+            <div class="menu-card__price"><span>R$</span><strong data-price>27,00</strong></div>
+          </article>
+
+          <article class="menu-card reveal" data-reveal data-simple="34,00" data-double="43,00"
+                    data-desc-simple="Smash de 90g, American Cheese artesanal, bacon fatiado, sweet picles e cebola caramelizada."
+                    data-desc-double="Duplo smash de 90g, dobro de American Cheese artesanal, bacon fatiado, sweet picles e cebola caramelizada.">
+            <div class="menu-card__top">
+              <h3>American Bacon</h3>
+              <div class="size-toggle" data-size-toggle>
+                <button type="button" class="size-toggle__opt is-active" data-size="simple">Simples</button>
+                <button type="button" class="size-toggle__opt" data-size="double">Duplo</button>
+              </div>
+            </div>
+            <p class="menu-card__desc" data-desc>Smash de 90g, American Cheese artesanal, bacon fatiado, sweet picles e cebola caramelizada.</p>
+            <div class="menu-card__price"><span>R$</span><strong data-price>34,00</strong></div>
+          </article>
+
+          <article class="menu-card reveal" data-reveal data-simple="35,00" data-double="44,00"
+                    data-desc-simple="Smash de 90g, gorgonzola feito na casa, bacon fatiado, sweet picles e cebola caramelizada."
+                    data-desc-double="Duplo smash de 90g, dobro de gorgonzola feito na casa, bacon fatiado, sweet picles e cebola caramelizada.">
+            <div class="menu-card__top">
+              <h3>Baconzola</h3>
+              <div class="size-toggle" data-size-toggle>
+                <button type="button" class="size-toggle__opt is-active" data-size="simple">Simples</button>
+                <button type="button" class="size-toggle__opt" data-size="double">Duplo</button>
+              </div>
+            </div>
+            <p class="menu-card__desc" data-desc>Smash de 90g, gorgonzola feito na casa, bacon fatiado, sweet picles e cebola caramelizada.</p>
+            <div class="menu-card__price"><span>R$</span><strong data-price>35,00</strong></div>
+          </article>
+
+          <article class="menu-card reveal" data-reveal data-simple="30,00" data-double="39,00"
+                    data-desc-simple="Smash de 90g, American Cheese artesanal, alface, tomate e cebola roxa."
+                    data-desc-double="Duplo smash de 90g, dobro de American Cheese artesanal, alface, tomate e cebola roxa.">
+            <div class="menu-card__top">
+              <h3>Adalas</h3>
+              <div class="size-toggle" data-size-toggle>
+                <button type="button" class="size-toggle__opt is-active" data-size="simple">Simples</button>
+                <button type="button" class="size-toggle__opt" data-size="double">Duplo</button>
+              </div>
+            </div>
+            <p class="menu-card__desc" data-desc>Smash de 90g, American Cheese artesanal, alface, tomate e cebola roxa.</p>
+            <div class="menu-card__price"><span>R$</span><strong data-price>30,00</strong></div>
+          </article>
+
+          <article class="menu-card reveal" data-reveal data-simple="34,00" data-double="43,00"
+                    data-desc-simple="Smash de 90g, American Cheese artesanal, bacon fatiado, sweet picles, alface, tomate e cebola roxa."
+                    data-desc-double="Duplo smash de 90g, dobro de American Cheese artesanal, bacon fatiado, sweet picles, alface, tomate e cebola roxa.">
+            <div class="menu-card__top">
+              <h3>All In</h3>
+              <div class="size-toggle" data-size-toggle>
+                <button type="button" class="size-toggle__opt is-active" data-size="simple">Simples</button>
+                <button type="button" class="size-toggle__opt" data-size="double">Duplo</button>
+              </div>
+            </div>
+            <p class="menu-card__desc" data-desc>Smash de 90g, American Cheese artesanal, bacon fatiado, sweet picles, alface, tomate e cebola roxa.</p>
+            <div class="menu-card__price"><span>R$</span><strong data-price>34,00</strong></div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- VEGETARIANOS -->
+      <div class="menu-panel" data-panel="vege">
+        <div class="menu-grid">
+          <article class="menu-card reveal" data-reveal>
+            <span class="badge badge--green">Vegê</span>
+            <div class="menu-card__top"><h3>Vegê American Cheese</h3></div>
+            <p class="menu-card__desc">Burguer de grão de bico feito na casa, queijo americano, alface, tomate, cebola roxa e sweet picles.</p>
+            <div class="menu-card__price"><span>R$</span><strong>38,00</strong></div>
+          </article>
+          <article class="menu-card reveal" data-reveal>
+            <span class="badge badge--green">Vegê</span>
+            <div class="menu-card__top"><h3>Vegê Gorgonzola</h3></div>
+            <p class="menu-card__desc">Burguer de grão de bico feito na casa, queijo gorgonzola artesanal, alface, tomate, cebola roxa e sweet picles.</p>
+            <div class="menu-card__price"><span>R$</span><strong>34,00</strong></div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ACOMPANHAMENTOS -->
+      <div class="menu-panel" data-panel="acompanhamentos">
+        <div class="menu-grid">
+
+          <article class="menu-card reveal" data-reveal data-simple="20,00" data-double="14,00"
+                    data-desc-simple="Aprox. 200g, acompanha maionese verde à parte."
+                    data-desc-double="Aprox. 120g, acompanha maionese verde à parte."
+                    data-label-simple="Inteira" data-label-double="Meia">
+            <div class="menu-card__top">
+              <h3>Batata Crinkle</h3>
+              <div class="size-toggle" data-size-toggle>
+                <button type="button" class="size-toggle__opt is-active" data-size="simple">Inteira</button>
+                <button type="button" class="size-toggle__opt" data-size="double">Meia</button>
+              </div>
+            </div>
+            <p class="menu-card__desc" data-desc>Aprox. 200g, acompanha maionese verde à parte.</p>
+            <div class="menu-card__price"><span>R$</span><strong data-price>20,00</strong></div>
+          </article>
+
+          <article class="menu-card reveal" data-reveal>
+            <div class="menu-card__top"><h3>Batata Crinkle Cheddar &amp; Bacon</h3></div>
+            <p class="menu-card__desc">Batata crinkle coberta com cheddar cremoso e bacon.</p>
+            <div class="menu-card__price"><span>R$</span><strong>35,00</strong></div>
+          </article>
+
+          <article class="menu-card reveal" data-reveal data-simple="24,00" data-double="15,00"
+                    data-desc-simple="Empanadinhos de frango, acompanha molho barbecue."
+                    data-desc-double="Empanadinhos de frango, acompanha molho barbecue."
+                    data-label-simple="10 un." data-label-double="5 un.">
+            <div class="menu-card__top">
+              <h3>Chicken Hover Nuggets</h3>
+              <div class="size-toggle" data-size-toggle>
+                <button type="button" class="size-toggle__opt is-active" data-size="simple">10 un.</button>
+                <button type="button" class="size-toggle__opt" data-size="double">5 un.</button>
+              </div>
+            </div>
+            <p class="menu-card__desc" data-desc>Empanadinhos de frango, acompanha molho barbecue.</p>
+            <div class="menu-card__price"><span>R$</span><strong data-price>24,00</strong></div>
+          </article>
+
+          <article class="menu-card reveal" data-reveal data-simple="34,00" data-double="20,00"
+                    data-desc-simple="Deliciosa porção de almofadinhas crispy de queijo gouda."
+                    data-desc-double="Meia porção de almofadinhas crispy de queijo gouda."
+                    data-label-simple="10 un." data-label-double="5 un.">
+            <div class="menu-card__top">
+              <h3>Almofadinha de Queijo Gouda</h3>
+              <div class="size-toggle" data-size-toggle>
+                <button type="button" class="size-toggle__opt is-active" data-size="simple">10 un.</button>
+                <button type="button" class="size-toggle__opt" data-size="double">5 un.</button>
+              </div>
+            </div>
+            <p class="menu-card__desc" data-desc>Deliciosa porção de almofadinhas crispy de queijo gouda.</p>
+            <div class="menu-card__price"><span>R$</span><strong data-price>34,00</strong></div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- MOLHOS -->
+      <div class="menu-panel" data-panel="molhos">
+        <div class="molho-grid">
+          <div class="molho-chip reveal" data-reveal><span>Molho Hover Picante</span><strong>R$ 4,00</strong></div>
+          <div class="molho-chip reveal" data-reveal><span>Maionese Verde</span><strong>R$ 4,00</strong></div>
+          <div class="molho-chip reveal" data-reveal><span>Geleia de Pimenta</span><strong>R$ 4,00</strong></div>
+          <div class="molho-chip reveal" data-reveal><span>Barbecue Extra</span><strong>R$ 4,00</strong></div>
+          <div class="molho-chip reveal" data-reveal><span>Pote de Cheddar Cremoso (75ml)</span><strong>R$ 10,00</strong></div>
+        </div>
+      </div>
+
+      <!-- BEBIDAS -->
+      <div class="menu-panel" data-panel="bebidas">
+        <div class="molho-grid">
+          <div class="molho-chip reveal" data-reveal><span>Cerveja Corona Longneck 330ml</span><strong>R$ 15,00</strong></div>
+          <div class="molho-chip reveal" data-reveal><span>Coca-Cola 350ml</span><strong>R$ 8,00</strong></div>
+          <div class="molho-chip reveal" data-reveal><span>Coca-Cola Zero 310ml</span><strong>R$ 8,00</strong></div>
+          <div class="molho-chip reveal" data-reveal><span>Guaraná 350ml</span><strong>R$ 8,00</strong></div>
+          <div class="molho-chip reveal" data-reveal><span>Guaraná Zero 350ml</span><strong>R$ 8,00</strong></div>
+          <div class="molho-chip reveal" data-reveal><span>Sprite / Fanta Laranja</span><strong>R$ 8,00</strong></div>
+          <div class="molho-chip reveal" data-reveal><span>H2OH Limoneto 500ml</span><strong>R$ 9,00</strong></div>
+          <div class="molho-chip reveal" data-reveal><span>Água sem/com Gás 500ml</span><strong>R$ 5,00</strong></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= HORÁRIOS & DELIVERY ================= -->
+  <section class="horarios" id="horarios">
+    <div class="container horarios__grid">
+      <div class="horarios__col reveal" data-reveal>
+        <p class="eyebrow">Funcionamento</p>
+        <h2 class="section-title">Horários</h2>
+        <p class="status-pill" id="statusPill"><span class="status-dot"></span><span id="statusText">verificando…</span></p>
+
+        <ul class="hours-table" id="hoursTable">
+          <li data-day="1"><span>Segunda</span><span>12:00–14:20 · 17:00–22:20</span></li>
+          <li data-day="2"><span>Terça</span><span>12:00–14:20 · 17:00–22:20</span></li>
+          <li data-day="3"><span>Quarta</span><span>12:00–14:20 · 17:00–22:20</span></li>
+          <li data-day="4"><span>Quinta</span><span>12:00–14:20 · 17:00–22:20</span></li>
+          <li data-day="5"><span>Sexta</span><span>12:00–14:20 · 17:00–22:40</span></li>
+          <li data-day="6"><span>Sábado</span><span>12:00–22:40</span></li>
+          <li data-day="0"><span>Domingo</span><span>Fechado</span></li>
+        </ul>
+      </div>
+
+      <div class="horarios__col reveal" data-reveal>
+        <p class="eyebrow">Delivery</p>
+        <h2 class="section-title">Peça onde quiser</h2>
+        <p class="sobre__p">Também estamos no seu app de delivery favorito.</p>
+        <div class="delivery-badges">
+          <span class="delivery-badge">iFood</span>
+          <span class="delivery-badge">Keeta</span>
+          <span class="delivery-badge">99 Food</span>
+        </div>
+        <a href="https://wa.me/5511989306729?text=Oi%2C%20Hover%20Burger!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener" class="btn btn--primary" data-magnetic><span>Pedir no WhatsApp</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LOCALIZAÇÃO ================= -->
+  <section class="localizacao" id="localizacao">
+    <div class="container loc__grid">
+      <div class="loc__info reveal" data-reveal>
+        <p class="eyebrow">Localização</p>
+        <h2 class="section-title">Bora comer?</h2>
+        <address class="loc__address">
+          Rua Cotoxó, 422 – Pompeia<br>
+          São Paulo - SP
+        </address>
+        <p class="loc__phone">
+          <a href="tel:+5511989306729">(11) 98930-6729</a>
+        </p>
+        <a class="btn btn--primary" data-magnetic
+           href="https://www.google.com/maps/dir/?api=1&destination=Rua%20Cotox%C3%B3%2C%20422%20-%20Pompeia%2C%20S%C3%A3o%20Paulo%20-%20SP"
+           target="_blank" rel="noopener">
+          <span>Como chegar</span>
+        </a>
+      </div>
+
+      <div class="loc__map reveal" data-reveal>
+        <iframe
+          src="https://www.google.com/maps?q=Rua+Cotox%C3%B3,+422+-+Pompeia,+S%C3%A3o+Paulo+-+SP&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+          title="Mapa até a Hover Burger"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <img src="assets/logo.png" alt="Hover Burger" class="footer__logo">
+    <p class="footer__tagline">Sabor sem rodeios.</p>
+
+    <nav class="footer__links">
+      <a href="#sobre">A Casa</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#horarios">Horários</a>
+      <a href="#localizacao">Localização</a>
+      <a href="https://www.instagram.com/hoverburger_/" target="_blank" rel="noopener">@hoverburger_</a>
+    </nav>
+
+    <p class="footer__copy">© <span id="year"></span> Hover Burger — Rua Cotoxó, 422, Pompeia, São Paulo - SP</p>
+  </div>
+</footer>
+
+<!-- ================= WHATSAPP FLOAT ================= -->
+<a class="whatsapp-float" href="https://wa.me/5511989306729?text=Oi%2C%20Hover%20Burger!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <span class="whatsapp-float__ring"></span>
+  <span class="whatsapp-float__ring whatsapp-float__ring--delay"></span>
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true">
+    <path d="M16.02 3C9.4 3 4 8.37 4 14.98c0 2.2.6 4.27 1.65 6.05L3 29l8.2-2.55a12.9 12.9 0 0 0 4.82.93h.01c6.62 0 12.02-5.37 12.02-11.98C28.05 8.37 22.65 3 16.02 3zm0 21.9c-1.68 0-3.32-.45-4.75-1.3l-.34-.2-4.86 1.51 1.55-4.73-.22-.36a9.83 9.83 0 0 1-1.53-5.34c0-5.46 4.46-9.9 9.96-9.9 2.66 0 5.16 1.04 7.04 2.92a9.86 9.86 0 0 1 2.9 6.98c0 5.46-4.46 9.9-9.75 9.9zm5.46-7.42c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z"/>
+  </svg>
+</a>
+
+<!-- ================= BACK TO TOP ================= -->
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
