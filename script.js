@@ -275,15 +275,34 @@
   --------------------------------------------------------- */
   if (!reducedMotion) {
     const heroContent = document.querySelector(".hero__content");
-    const heroVideo = document.querySelector(".hero__video");
+    const fadeDistance = 520; // fully faded well before the hero section ends
     window.addEventListener("scroll", () => {
+      if (!heroContent) return;
       const y = window.scrollY;
-      if (y < window.innerHeight) {
-        if (heroContent) heroContent.style.transform = `translateY(${y * 0.35}px)`;
-        if (heroVideo) heroVideo.style.transform = `scale(1.03) translateY(${y * 0.15}px)`;
-        heroContent.style.opacity = String(Math.max(1 - y / 620, 0));
+      if (y < fadeDistance) {
+        const p = y / fadeDistance;
+        heroContent.style.transform = `translateY(${y * -0.2}px)`;
+        heroContent.style.opacity = String(Math.max(1 - p, 0));
+        heroContent.style.pointerEvents = "auto";
+      } else {
+        heroContent.style.opacity = "0";
+        heroContent.style.pointerEvents = "none";
       }
     }, { passive: true });
   }
+
+  /* ---------------------------------------------------------
+     HERO SLIDESHOW
+  --------------------------------------------------------- */
+  (function heroSlideshow() {
+    const slides = document.querySelectorAll("#heroSlideshow .hero__slide");
+    if (slides.length < 2) return;
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove("is-active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("is-active");
+    }, 4800);
+  })();
 
 })();

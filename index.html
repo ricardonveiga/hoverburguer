@@ -10,7 +10,7 @@
 <meta property="og:type" content="restaurant">
 <meta property="og:title" content="Hover Burger — Sabor sem rodeios">
 <meta property="og:description" content="Smash burgers de verdade em Pompeia, São Paulo. Gorgonzola feito na casa, carne na chapa, sem frescura.">
-<meta property="og:image" content="assets/hero-poster.jpg">
+<meta property="og:image" content="assets/menu/gorgozin.webp">
 
 <link rel="icon" href="assets/logo.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/logo.png">
@@ -68,29 +68,23 @@
   <!-- ================= HERO ================= -->
   <section class="hero" id="hero">
     <div class="hero__media">
-      <video
-        class="hero__video"
-        src="assets/hero-video.mp4"
-        poster="assets/hero-poster.jpg"
-        autoplay muted loop playsinline
-        preload="auto"></video>
+      <div class="hero__slideshow" id="heroSlideshow">
+        <div class="hero__slide is-active" style="background-image:url('assets/menu/gorgozin.webp')"></div>
+        <div class="hero__slide" style="background-image:url('assets/menu/american-bacon.webp')"></div>
+        <div class="hero__slide" style="background-image:url('assets/menu/baconzola.webp')"></div>
+        <div class="hero__slide" style="background-image:url('assets/menu/all-in.webp')"></div>
+        <div class="hero__slide" style="background-image:url('assets/menu/hoverzin.webp')"></div>
+      </div>
       <div class="hero__overlay"></div>
       <div class="hero__vignette"></div>
     </div>
 
     <div class="hero__content container">
-      <p class="hero__eyebrow reveal" data-reveal>@hoverburger_ · Pompeia, São Paulo</p>
+      <div class="hero__logo reveal" data-reveal>
+        <img src="assets/logo.png" alt="Hover Burger">
+      </div>
 
-      <h1 class="hero__title" aria-label="Hover Burger">
-        <span class="hero__title-line">
-          <span class="word">HOVER</span>
-        </span>
-        <span class="hero__title-line hero__title-line--accent">
-          <span class="word">BURGER</span>
-        </span>
-      </h1>
-
-      <p class="hero__tagline reveal" data-reveal>Seu smash burger favorito <span class="hero__smile">:)</span></p>
+      <p class="hero__tagline reveal" data-reveal>Seu smash burger favorito</p>
       <p class="hero__sub reveal" data-reveal>Sabor sem rodeios. Pão brioche macio, smash de 90g na chapa e gorgonzola feito na casa.</p>
 
       <div class="hero__actions reveal" data-reveal>
@@ -102,11 +96,6 @@
         </a>
       </div>
     </div>
-
-    <div class="hero__scroll" aria-hidden="true">
-      <span class="hero__scroll-mouse"><span></span></span>
-      <span class="hero__scroll-label">role para baixo</span>
-    </div>
   </section>
 
   <!-- ================= MARQUEE ================= -->
@@ -114,12 +103,10 @@
     <div class="marquee__track">
       <span>SMASH DE 90G&nbsp;</span><span class="marquee__dot">★</span>
       <span>&nbsp;GORGONZOLA FEITO NA CASA&nbsp;</span><span class="marquee__dot">★</span>
-      <span>&nbsp;CHAPA QUENTE&nbsp;</span><span class="marquee__dot">★</span>
       <span>&nbsp;PÃO BRIOCHE MACIO&nbsp;</span><span class="marquee__dot">★</span>
       <span>&nbsp;DELIVERY RÁPIDO&nbsp;</span><span class="marquee__dot">★</span>
       <span>SMASH DE 90G&nbsp;</span><span class="marquee__dot">★</span>
       <span>&nbsp;GORGONZOLA FEITO NA CASA&nbsp;</span><span class="marquee__dot">★</span>
-      <span>&nbsp;CHAPA QUENTE&nbsp;</span><span class="marquee__dot">★</span>
       <span>&nbsp;PÃO BRIOCHE MACIO&nbsp;</span><span class="marquee__dot">★</span>
       <span>&nbsp;DELIVERY RÁPIDO&nbsp;</span><span class="marquee__dot">★</span>
     </div>
@@ -181,7 +168,7 @@
         <span class="destaque__price-value">R$ 27</span>
         <span class="destaque__price-cents">,00</span>
       </div>
-      <a href="#cardapio" class="btn btn--primary reveal" data-reveal data-magnetic><span>Quero o meu</span></a>
+      <a href="#horarios" class="btn btn--primary reveal" data-reveal data-magnetic><span>Quero o meu</span></a>
     </div>
   </section>
 
@@ -206,6 +193,7 @@
           <article class="menu-card reveal" data-reveal data-simple="27,00" data-double="37,00"
                     data-desc-simple="Smash de 90g, queijo americano e molho à sua escolha."
                     data-desc-double="Duplo smash de 90g, com o dobro do queijo americano.">
+            <div class="menu-card__media"><img src="assets/menu/hoverzin.webp" alt="Hoverzin" loading="lazy"></div>
             <div class="menu-card__top">
               <h3>Hoverzin</h3>
               <div class="size-toggle" data-size-toggle>
@@ -221,6 +209,7 @@
                     data-desc-simple="Smash de 90g, queijo gorgonzola feito na casa."
                     data-desc-double="Duplo smash de 90g, com o dobro de queijo gorgonzola feito na casa.">
             <span class="badge">Mais Pedido</span>
+            <div class="menu-card__media"><img src="assets/menu/gorgozin.webp" alt="Gorgozin" loading="lazy"></div>
             <div class="menu-card__top">
               <h3>Gorgozin</h3>
               <div class="size-toggle" data-size-toggle>
@@ -235,6 +224,7 @@
           <article class="menu-card reveal" data-reveal data-simple="34,00" data-double="43,00"
                     data-desc-simple="Smash de 90g, American Cheese artesanal, bacon fatiado, sweet picles e cebola caramelizada."
                     data-desc-double="Duplo smash de 90g, dobro de American Cheese artesanal, bacon fatiado, sweet picles e cebola caramelizada.">
+            <div class="menu-card__media"><img src="assets/menu/american-bacon.webp" alt="American Bacon" loading="lazy"></div>
             <div class="menu-card__top">
               <h3>American Bacon</h3>
               <div class="size-toggle" data-size-toggle>
@@ -249,6 +239,7 @@
           <article class="menu-card reveal" data-reveal data-simple="35,00" data-double="44,00"
                     data-desc-simple="Smash de 90g, gorgonzola feito na casa, bacon fatiado, sweet picles e cebola caramelizada."
                     data-desc-double="Duplo smash de 90g, dobro de gorgonzola feito na casa, bacon fatiado, sweet picles e cebola caramelizada.">
+            <div class="menu-card__media"><img src="assets/menu/baconzola.webp" alt="Baconzola" loading="lazy"></div>
             <div class="menu-card__top">
               <h3>Baconzola</h3>
               <div class="size-toggle" data-size-toggle>
@@ -263,6 +254,7 @@
           <article class="menu-card reveal" data-reveal data-simple="30,00" data-double="39,00"
                     data-desc-simple="Smash de 90g, American Cheese artesanal, alface, tomate e cebola roxa."
                     data-desc-double="Duplo smash de 90g, dobro de American Cheese artesanal, alface, tomate e cebola roxa.">
+            <div class="menu-card__media"><img src="assets/menu/adalas.webp" alt="Adalas" loading="lazy"></div>
             <div class="menu-card__top">
               <h3>Adalas</h3>
               <div class="size-toggle" data-size-toggle>
@@ -277,6 +269,7 @@
           <article class="menu-card reveal" data-reveal data-simple="34,00" data-double="43,00"
                     data-desc-simple="Smash de 90g, American Cheese artesanal, bacon fatiado, sweet picles, alface, tomate e cebola roxa."
                     data-desc-double="Duplo smash de 90g, dobro de American Cheese artesanal, bacon fatiado, sweet picles, alface, tomate e cebola roxa.">
+            <div class="menu-card__media"><img src="assets/menu/all-in.webp" alt="All In" loading="lazy"></div>
             <div class="menu-card__top">
               <h3>All In</h3>
               <div class="size-toggle" data-size-toggle>
@@ -296,12 +289,14 @@
         <div class="menu-grid">
           <article class="menu-card reveal" data-reveal>
             <span class="badge badge--green">Vegê</span>
+            <div class="menu-card__media"><img src="assets/menu/vege.webp" alt="Vegê American Cheese" loading="lazy"></div>
             <div class="menu-card__top"><h3>Vegê American Cheese</h3></div>
             <p class="menu-card__desc">Burguer de grão de bico feito na casa, queijo americano, alface, tomate, cebola roxa e sweet picles.</p>
             <div class="menu-card__price"><span>R$</span><strong>38,00</strong></div>
           </article>
           <article class="menu-card reveal" data-reveal>
             <span class="badge badge--green">Vegê</span>
+            <div class="menu-card__media"><img src="assets/menu/vege.webp" alt="Vegê Gorgonzola" loading="lazy"></div>
             <div class="menu-card__top"><h3>Vegê Gorgonzola</h3></div>
             <p class="menu-card__desc">Burguer de grão de bico feito na casa, queijo gorgonzola artesanal, alface, tomate, cebola roxa e sweet picles.</p>
             <div class="menu-card__price"><span>R$</span><strong>34,00</strong></div>
@@ -317,6 +312,7 @@
                     data-desc-simple="Aprox. 200g, acompanha maionese verde à parte."
                     data-desc-double="Aprox. 120g, acompanha maionese verde à parte."
                     data-label-simple="Inteira" data-label-double="Meia">
+            <div class="menu-card__media"><img src="assets/menu/batata-crinkle.webp" alt="Batata Crinkle" loading="lazy"></div>
             <div class="menu-card__top">
               <h3>Batata Crinkle</h3>
               <div class="size-toggle" data-size-toggle>
@@ -329,6 +325,7 @@
           </article>
 
           <article class="menu-card reveal" data-reveal>
+            <div class="menu-card__media"><img src="assets/menu/batata-cheddar-bacon.webp" alt="Batata Crinkle Cheddar e Bacon" loading="lazy"></div>
             <div class="menu-card__top"><h3>Batata Crinkle Cheddar &amp; Bacon</h3></div>
             <p class="menu-card__desc">Batata crinkle coberta com cheddar cremoso e bacon.</p>
             <div class="menu-card__price"><span>R$</span><strong>35,00</strong></div>
@@ -338,6 +335,7 @@
                     data-desc-simple="Empanadinhos de frango, acompanha molho barbecue."
                     data-desc-double="Empanadinhos de frango, acompanha molho barbecue."
                     data-label-simple="10 un." data-label-double="5 un.">
+            <div class="menu-card__media"><img src="assets/menu/nuggets.webp" alt="Chicken Hover Nuggets" loading="lazy"></div>
             <div class="menu-card__top">
               <h3>Chicken Hover Nuggets</h3>
               <div class="size-toggle" data-size-toggle>
@@ -353,6 +351,9 @@
                     data-desc-simple="Deliciosa porção de almofadinhas crispy de queijo gouda."
                     data-desc-double="Meia porção de almofadinhas crispy de queijo gouda."
                     data-label-simple="10 un." data-label-double="5 un.">
+            <div class="menu-card__media menu-card__media--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-8.5Z"/><path d="M8 20v-5a4 4 0 0 1 8 0v5"/></svg>
+            </div>
             <div class="menu-card__top">
               <h3>Almofadinha de Queijo Gouda</h3>
               <div class="size-toggle" data-size-toggle>
@@ -380,15 +381,60 @@
 
       <!-- BEBIDAS -->
       <div class="menu-panel" data-panel="bebidas">
-        <div class="molho-grid">
-          <div class="molho-chip reveal" data-reveal><span>Cerveja Corona Longneck 330ml</span><strong>R$ 15,00</strong></div>
-          <div class="molho-chip reveal" data-reveal><span>Coca-Cola 350ml</span><strong>R$ 8,00</strong></div>
-          <div class="molho-chip reveal" data-reveal><span>Coca-Cola Zero 310ml</span><strong>R$ 8,00</strong></div>
-          <div class="molho-chip reveal" data-reveal><span>Guaraná 350ml</span><strong>R$ 8,00</strong></div>
-          <div class="molho-chip reveal" data-reveal><span>Guaraná Zero 350ml</span><strong>R$ 8,00</strong></div>
-          <div class="molho-chip reveal" data-reveal><span>Sprite / Fanta Laranja</span><strong>R$ 8,00</strong></div>
-          <div class="molho-chip reveal" data-reveal><span>H2OH Limoneto 500ml</span><strong>R$ 9,00</strong></div>
-          <div class="molho-chip reveal" data-reveal><span>Água sem/com Gás 500ml</span><strong>R$ 5,00</strong></div>
+        <div class="menu-grid menu-grid--drinks">
+
+          <article class="menu-card menu-card--drink reveal" data-reveal>
+            <div class="menu-card__media menu-card__media--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 2h6v3.2c0 .5.2 1 .5 1.3l2 2.3c.3.4.5.9.5 1.3V20a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V10.1c0-.5.2-1 .5-1.3l2-2.3c.3-.4.5-.8.5-1.3V2Z"/><path d="M7 14h10"/></svg>
+            </div>
+            <div class="menu-card__top"><h3>Corona Longneck 330ml</h3></div>
+            <div class="menu-card__price"><span>R$</span><strong>15,00</strong></div>
+          </article>
+
+          <article class="menu-card menu-card--drink reveal" data-reveal>
+            <div class="menu-card__media"><img src="assets/menu/coca-cola.webp" alt="Coca-Cola 350ml" loading="lazy"></div>
+            <div class="menu-card__top"><h3>Coca-Cola 350ml</h3></div>
+            <div class="menu-card__price"><span>R$</span><strong>8,00</strong></div>
+          </article>
+
+          <article class="menu-card menu-card--drink reveal" data-reveal>
+            <div class="menu-card__media"><img src="assets/menu/coca-cola-zero.webp" alt="Coca-Cola Zero 310ml" loading="lazy"></div>
+            <div class="menu-card__top"><h3>Coca-Cola Zero 310ml</h3></div>
+            <div class="menu-card__price"><span>R$</span><strong>8,00</strong></div>
+          </article>
+
+          <article class="menu-card menu-card--drink reveal" data-reveal>
+            <div class="menu-card__media"><img src="assets/menu/guarana.webp" alt="Guaraná 350ml" loading="lazy"></div>
+            <div class="menu-card__top"><h3>Guaraná 350ml</h3></div>
+            <div class="menu-card__price"><span>R$</span><strong>8,00</strong></div>
+          </article>
+
+          <article class="menu-card menu-card--drink reveal" data-reveal>
+            <div class="menu-card__media"><img src="assets/menu/guarana-zero.webp" alt="Guaraná Zero 350ml" loading="lazy"></div>
+            <div class="menu-card__top"><h3>Guaraná Zero 350ml</h3></div>
+            <div class="menu-card__price"><span>R$</span><strong>8,00</strong></div>
+          </article>
+
+          <article class="menu-card menu-card--drink reveal" data-reveal>
+            <div class="menu-card__media menu-card__media--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 2h6v3.2c0 .5.2 1 .5 1.3l2 2.3c.3.4.5.9.5 1.3V20a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V10.1c0-.5.2-1 .5-1.3l2-2.3c.3-.4.5-.8.5-1.3V2Z"/><path d="M7 14h10"/></svg>
+            </div>
+            <div class="menu-card__top"><h3>Sprite / Fanta Laranja</h3></div>
+            <div class="menu-card__price"><span>R$</span><strong>8,00</strong></div>
+          </article>
+
+          <article class="menu-card menu-card--drink reveal" data-reveal>
+            <div class="menu-card__media"><img src="assets/menu/h2oh.webp" alt="H2OH Limoneto 500ml" loading="lazy"></div>
+            <div class="menu-card__top"><h3>H2OH Limoneto 500ml</h3></div>
+            <div class="menu-card__price"><span>R$</span><strong>9,00</strong></div>
+          </article>
+
+          <article class="menu-card menu-card--drink reveal" data-reveal>
+            <div class="menu-card__media"><img src="assets/menu/agua.webp" alt="Água sem/com Gás 500ml" loading="lazy"></div>
+            <div class="menu-card__top"><h3>Água sem/com Gás 500ml</h3></div>
+            <div class="menu-card__price"><span>R$</span><strong>5,00</strong></div>
+          </article>
+
         </div>
       </div>
 
@@ -419,12 +465,31 @@
         <h2 class="section-title">Peça onde quiser</h2>
         <p class="sobre__p">Também estamos no seu app de delivery favorito.</p>
         <div class="delivery-badges">
-          <span class="delivery-badge">iFood</span>
-          <span class="delivery-badge">Keeta</span>
-          <span class="delivery-badge">99 Food</span>
+          <a class="delivery-badge" href="https://www.ifood.com.br/delivery/sao-paulo-sp/hover-burger---hamburgueria-artesanal-perdizes/dc336ba3-9f81-4260-a16c-496a027808cc" target="_blank" rel="noopener">iFood</a>
+          <a class="delivery-badge" href="https://url-eu.mykeeta.com/Fti1wK0z" target="_blank" rel="noopener">Keeta</a>
+          <a class="delivery-badge" href="https://oia.99app.com/dlp9/IfxWiu" target="_blank" rel="noopener">99 Food</a>
         </div>
         <a href="https://wa.me/5511989306729?text=Oi%2C%20Hover%20Burger!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener" class="btn btn--primary" data-magnetic><span>Pedir no WhatsApp</span></a>
       </div>
+    </div>
+  </section>
+
+  <!-- ================= FIDELIDADE ================= -->
+  <section class="fidelidade">
+    <div class="fidelidade__glow" aria-hidden="true"></div>
+    <div class="container fidelidade__inner">
+      <div class="fidelidade__icon reveal" data-reveal aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 17.3 6.2 20.5l1.1-6.4-4.6-4.5 6.4-.9L12 2.7l2.9 5.9 6.4.9-4.6 4.5 1.1 6.4z"/></svg>
+      </div>
+      <p class="eyebrow reveal" data-reveal>Hover Club</p>
+      <h2 class="section-title reveal" data-reveal>Toda compra <span class="text-accent">vira pontos</span></h2>
+      <p class="fidelidade__desc reveal" data-reveal>
+        Na primeira visita você já sai ganhando uma batata frita. Depois, cada compra acumula pontos
+        que viram prêmios cada vez maiores — porções, burgers e até um combo completo.
+      </p>
+      <a class="btn btn--primary reveal" data-reveal data-magnetic href="https://zupy.com/@hoverburger" target="_blank" rel="noopener">
+        <span>Entrar no Hover Club</span>
+      </a>
     </div>
   </section>
 
@@ -435,8 +500,7 @@
         <p class="eyebrow">Localização</p>
         <h2 class="section-title">Bora comer?</h2>
         <address class="loc__address">
-          Rua Cotoxó, 422 – Pompeia<br>
-          São Paulo - SP
+          Rua Cotoxó, 422 – Pompeia
         </address>
         <p class="loc__phone">
           <a href="tel:+5511989306729">(11) 98930-6729</a>
@@ -475,7 +539,14 @@
       <a href="https://www.instagram.com/hoverburger_/" target="_blank" rel="noopener">@hoverburger_</a>
     </nav>
 
-    <p class="footer__copy">© <span id="year"></span> Hover Burger — Rua Cotoxó, 422, Pompeia, São Paulo - SP</p>
+    <div class="footer__meta">
+      <span class="footer__address">Rua Cotoxó, 422, Pompeia</span>
+      <a class="footer__social" href="https://www.instagram.com/hoverburger_/" target="_blank" rel="noopener" aria-label="Hover Burger no Instagram">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg>
+      </a>
+    </div>
+
+    <p class="footer__copy">© <span id="year"></span> Hover Burger</p>
   </div>
 </footer>
 
