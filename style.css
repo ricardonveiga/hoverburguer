@@ -516,21 +516,15 @@ section{ position: relative; }
 .footer{ padding: 5rem 0 3rem; text-align: center; border-top: 1px solid var(--line); }
 .footer__logo{ width: 84px; margin: 0 auto 1rem; opacity: .95; }
 .footer__tagline{ color: var(--muted); margin-bottom: 2rem; font-family: var(--font-display); letter-spacing: .04em; font-size: 1.1rem; }
-.footer__links{ display: flex; gap: 1.8rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.4rem; }
+.footer__links{ display: flex; align-items: center; gap: 1.8rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.4rem; }
 .footer__links a{ color: var(--muted); font-size: .88rem; font-weight: 600; transition: color .3s var(--ease); }
 .footer__links a:hover{ color: var(--accent); }
+.footer__social{ display: inline-flex; align-items: center; gap: .4rem; }
 
 .footer__meta{
-  display: flex; align-items: center; justify-content: center; gap: .9rem;
+  display: flex; align-items: center; justify-content: center;
   margin-bottom: 1rem; color: var(--muted); font-size: .85rem;
 }
-.footer__social{
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 34px; height: 34px; border-radius: 50%;
-  border: 1px solid var(--line); color: var(--muted);
-  transition: all .3s var(--ease);
-}
-.footer__social:hover{ color: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
 
 .footer__copy{ color: var(--muted-2); font-size: .78rem; }
 
