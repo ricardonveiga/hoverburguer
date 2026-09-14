@@ -48,6 +48,9 @@
     const isOpen = navLinks.classList.toggle("is-open");
     navBurger.classList.toggle("is-open", isOpen);
     navBurger.setAttribute("aria-expanded", String(isOpen));
+    // backdrop-filter on .nav creates a containing block for the fixed
+    // full-screen overlay, shrinking it to the header's own box once scrolled.
+    nav.classList.toggle("nav--menu-open", isOpen);
     document.body.style.overflow = isOpen ? "hidden" : "";
   });
 
@@ -56,6 +59,7 @@
       navLinks.classList.remove("is-open");
       navBurger.classList.remove("is-open");
       navBurger.setAttribute("aria-expanded", "false");
+      nav.classList.remove("nav--menu-open");
       document.body.style.overflow = "";
     });
   });
