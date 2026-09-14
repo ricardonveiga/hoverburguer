@@ -291,18 +291,4 @@
     }, { passive: true });
   }
 
-  /* ---------------------------------------------------------
-     HERO SLIDESHOW
-  --------------------------------------------------------- */
-  (function heroSlideshow() {
-    const slides = document.querySelectorAll("#heroSlideshow .hero__slide");
-    if (slides.length < 2) return;
-    let current = 0;
-    setInterval(() => {
-      slides[current].classList.remove("is-active");
-      current = (current + 1) % slides.length;
-      slides[current].classList.add("is-active");
-    }, 4800);
-  })();
-
 })();

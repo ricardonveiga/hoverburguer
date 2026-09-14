@@ -68,13 +68,12 @@
   <!-- ================= HERO ================= -->
   <section class="hero" id="hero">
     <div class="hero__media">
-      <div class="hero__slideshow" id="heroSlideshow">
-        <div class="hero__slide is-active" style="background-image:url('assets/menu/gorgozin.webp')"></div>
-        <div class="hero__slide" style="background-image:url('assets/menu/american-bacon.webp')"></div>
-        <div class="hero__slide" style="background-image:url('assets/menu/baconzola.webp')"></div>
-        <div class="hero__slide" style="background-image:url('assets/menu/all-in.webp')"></div>
-        <div class="hero__slide" style="background-image:url('assets/menu/hoverzin.webp')"></div>
-      </div>
+      <video
+        class="hero__video"
+        src="assets/hero-video.mp4"
+        poster="assets/hero-poster.jpg"
+        autoplay muted loop playsinline
+        preload="auto"></video>
       <div class="hero__overlay"></div>
       <div class="hero__vignette"></div>
     </div>
@@ -168,7 +167,7 @@
         <span class="destaque__price-value">R$ 27</span>
         <span class="destaque__price-cents">,00</span>
       </div>
-      <a href="#horarios" class="btn btn--primary reveal" data-reveal data-magnetic><span>Quero o meu</span></a>
+      <a href="#delivery" class="btn btn--primary reveal" data-reveal data-magnetic><span>Quero o meu</span></a>
     </div>
   </section>
 
@@ -460,7 +459,7 @@
         </ul>
       </div>
 
-      <div class="horarios__col reveal" data-reveal>
+      <div class="horarios__col reveal" data-reveal id="delivery">
         <p class="eyebrow">Delivery</p>
         <h2 class="section-title">Peça onde quiser</h2>
         <p class="sobre__p">Também estamos no seu app de delivery favorito.</p>
